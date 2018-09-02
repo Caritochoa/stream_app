@@ -1,0 +1,19 @@
+ 
+ <!DOCTYPE html>
+
+ {% load twitter_tag %}
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+{% get_tweets for "NowPlaying" as tweets limit 5 %}
+{% search_tweets for "NowPlaying" as tweets limit 5 %}
+<ul>
+{% for tweet in tweets %}
+	<li> {{ tweet.html|safe }}</li>
+{% endfor %}	
+</ul>
+
+</body>
+</html> 
