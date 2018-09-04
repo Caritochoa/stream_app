@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'streaming',
     'twitter_tag',
+
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -138,3 +139,7 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(os.path.join(BASE_DIR), 'static_cdn')
+
+
+GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
+

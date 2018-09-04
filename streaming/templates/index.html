@@ -2,13 +2,23 @@
  <!DOCTYPE html>
 
  {% load twitter_tag %}
+
 <html>
 <body>
 
-<h1>My First Heading</h1>
+<h1> # NowPlaying in {{ city }} </h1>
 <p>My first paragraph.</p>
 {% get_tweets for "NowPlaying" as tweets limit 5 %}
-{% search_tweets for "NowPlaying" as tweets limit 5 %}
+
+
+<!--{% search_tweets for "NowPlaying" as tweets limit 5 %}-->
+
+
+{% search_tweets for "NowPlaying" as tweets  geocode='43.913723261972588,-72.54272478125,150km' limit 5 %}
+
+<!--geocode='43.913723261972588,-72.54272478125,150km'-->
+
+
 <ul>
 {% for tweet in tweets %}
 	<li> {{ tweet.html|safe }}</li>
