@@ -11,17 +11,19 @@ import json
 
 def index_call(request):
 	city = get_client_ip(request)
-	return render(request, 'index2.html', {'latitude':city['latitude'], 'longitude':city['longitude'], 'city':city['city']})
+	return render(request, 'index.html', {'latitude':city['latitude'], 'longitude':city['longitude'], 'city':city['city']})
 	#accuracy = "500ft"
-	geocode = city['latitude'], city['longitude'], 
-	
+	#geocode = city['latitude'], city['longitude'], 
 
 
 def get_client_ip(request):
 	ip = socket.gethostbyname(socket.gethostname())
 	g = GeoIP2()
-	city = g.city("173.255.189.42")
+	city = g.city("173.255.189.42") # here the variable ip 
+	lat_lon = g.lat_lon("173.255.189.42")
 	return city
+	return lat_lon
+
 
 
 
