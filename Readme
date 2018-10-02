@@ -11,8 +11,7 @@ To connect  to to the Twitter Api I used a feature called Django-twitter Tag, it
 allows us to call the tweet objects and query the different characteristics present in 
 the Json Files.(of course as a dict in Python).
 In the index file I added   the tags  calling  Tweet characterístics like text and screen_user among others, 
-The tags are working properly but I was not able to query the entities.url that is why I had to embed a youtube 
-video as a placeholder. 
+The tags are working properly.
 
 
 In order to perform IP-based geolocation I installed the GeoIP2 library, I wrote inside the views.py the variables 
@@ -20,9 +19,6 @@ to retrieve  the user IP and and from that information, I queried the latitude a
 from the city we want to stream, this var named lat_long is  tagged inside the index in the line 51 where it calls 
 the geocode attribute. 
 
-For the front end I used Bootstrap,  it provides flexibility and speed in the front end coding. 
-I was not able to query attributes from the tweets, and I did not have enough time to develop the 
-input text space to tweet. 
 
 The time spend on this projects was three business days.
 
